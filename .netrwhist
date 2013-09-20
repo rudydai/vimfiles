@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/rudydai/schoolsp13/cs162/nachos/machine'
 let g:netrw_dirhist_2='/home/rudydai/cleanweb/templates'
 let g:netrw_dirhist_3='/home/rudydai/schoolsp13/cs170/src/mlst/randomize'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/home/rudydai/virtustream/spotcloud/src/spotcloud/templat
 let g:netrw_dirhist_5='/etc/resolvconf/update.d'
 let g:netrw_dirhist_6='/home/rudydai/tmp'
 let g:netrw_dirhist_7='/home/rudydai/workspace/linkedinhack/.git'
+let g:netrw_dirhist_8='/home/rudydai/.vim/snippets'
