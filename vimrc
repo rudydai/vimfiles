@@ -17,10 +17,12 @@ set smartcase
 set hlsearch
 nmap \q :nohlsearch<CR>
 
-"""tabbing"""
+"""formatting"""
 set tabstop=4
 set shiftwidth=4
+set bs=2
 set expandtab
+set smarttab
 set autoindent
 set cindent
 
@@ -35,6 +37,13 @@ nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 set mouse=a
 set magic
 syntax on
+set ruler
+set nu
+set timeoutlen=250
+set showmatch
+set mat=5
+set nocompatible
+set clipboard+=unnamed
 filetype on
 filetype plugin indent on
 
@@ -47,23 +56,3 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
-"""todo list"""
-map <leader>td <Plug>TaskList
-"""tabcomplete"""
-au FileType python set omnifunc=pythoncomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
-
-call pathogen#infect()
-
-" Add the virtualenv's site-packages to vim path
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, project_base_dir)
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
-
